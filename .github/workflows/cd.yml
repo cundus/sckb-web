@@ -23,8 +23,9 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            cd ~/home/danielwetan/apps/node1
+            cd ~/home/sundus/sckb-web
             git pull origin main
             git status
             npm install --only=prod
+            npm run build
             pm2 restart sckb-web
